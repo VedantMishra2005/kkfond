@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="KK Foundation" />
+  <title>KK foundation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #34495e;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+    }
+    nav a:hover {
+      background-color: #2c3e50;
+    }
+    section {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .container {
+      padding: 30px;
+      text-align: center;
+    }
+    #openFormBtn, #openScholarshipFormBtn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      margin: 10px;
+    }
+    .form-container {
+      margin-top: 30px;
+      display: none;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #fff;
+      padding: 20px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    input[type="text"], input[type="email"], input[type="number"], textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button[type="submit"] {
+      background-color: #27ae60;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Your Foundation</h1>
+    <p>Working together to create positive change</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#work">Our Work</a>
+    <a href="#involved">Get Involved</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+
+  <section id="home">
+    <h2>Banner</h2>
+    <p>Welcome to our foundation. Our mission is to bring change that matters.</p>
+    <ul>
+      <li>Quick Link 1</li>
+      <li>Quick Link 2</li>
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Our vision is to empower and uplift communities. Meet our dedicated team and check out our achievements.</p>
+  </section>
+
+  <section id="work">
+    <h2>Our Work</h2>
+    <p>free Scholarship</p>
+  </section>
+
+  <section id="involved">
+    <h2>Get Involved</h2>
+    <button id="openFormBtn">+ Add Volunteer Form</button>
+    <div class="form-container" id="dynamicForm">
+      <h3>Volunteer With Us</h3>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Why do you want to volunteer?</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <button id="openScholarshipFormBtn">+ Apply for Scholarship</button>
+    <div class="form-container" id="scholarshipForm">
+      <h3>Scholarship Application Form</h3>
+      <form action="#" method="post">
+        <label for="studentName">Student Name:</label>
+        <input type="text" id="studentName" name="studentName" required>
+
+        <label for="studentEmail">Email:</label>
+        <input type="email" id="studentEmail" name="studentEmail" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label for="course">Course Name:</label>
+        <input type="text" id="course" name="course" required>
+
+        <label for="reason">Why do you need this scholarship?</label>
+        <textarea id="reason" name="reason" rows="4" required></textarea>
+
+        <button type="submit">Submit Application</button>
+      </form>
+    </div>
+
+    <p>Want to help further? Consider donating or joining our upcoming events!</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Phone: +91-987XXXXX<br>Email: contact@yourfoundation.org</p>
+    <iframe src="https://maps.google.com/maps?q=Delhi&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </section>
+
+  <script>
+    const openFormBtn = document.getElementById("openFormBtn");
+    const dynamicForm = document.getElementById("dynamicForm");
+    const openScholarshipFormBtn = document.getElementById("openScholarshipFormBtn");
+    const scholarshipForm = document.getElementById("scholarshipForm");
+
+    openFormBtn.addEventListener("click", () => {
+      dynamicForm.style.display = dynamicForm.style.display === "block" ? "none" : "block";
+    });
+
+    openScholarshipFormBtn.addEventListener("click", () => {
+      scholarshipForm.style.display = scholarshipForm.style.display === "block" ? "none" : "block";
+    });
+  </script>
+</body>
+</html>
